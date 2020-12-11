@@ -30,5 +30,17 @@ services:
       - ./mysql:/var/lib/mysql
     networks:
       - laravel
+  php:
+    build:  .
+      context:  Dockerfile
+    container_name: php
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - 9000:80
+    networks:
+      - laravel
+networks:
+  laravel:
 
 
