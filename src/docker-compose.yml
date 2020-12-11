@@ -4,6 +4,7 @@ services:
   nginx:
     image: nginx:stable-alpine
     container_name: nginx
+    restart: always
     ports:
       - 8888:80
     volumes:
@@ -14,3 +15,20 @@ services:
       - mysql
     networks:
       - laravel
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: challengebackend
+      MYSQL_USER: homestead
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD:  admin.root
+    ports:
+      - 33069:3306
+    volumes:
+      - ./mysql:/var/lib/mysql
+    networks:
+      - laravel
+
+
