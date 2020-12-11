@@ -18,4 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::ApiResource('usuarios', 'API\UsuarioController');
+Route::ApiResource('usuarios', 'API\UsuarioController')->except(['store','update','destroy']);
