@@ -39,7 +39,7 @@ class UsuarioController extends Controller
      */
     public function show(Usuario $usuario)
     {
-        return new UsuarioCollection(Usuario::findOrFail($usuario->id));
+        //
     }
 
     /**
