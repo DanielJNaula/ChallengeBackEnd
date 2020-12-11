@@ -61,6 +61,10 @@ class NotaController extends Controller
      */
     public function destroy(Nota $nota)
     {
-        //
+        $nota->delete();
+        return response()->json([
+            'res'     => true,
+            'message' => 'La nota ha sido eliminada exitosamente',
+        ], 200);
     }
 }
