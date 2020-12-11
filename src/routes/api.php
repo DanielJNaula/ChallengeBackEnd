@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::ApiResource('usuarios', 'API\UsuarioController')->except(['store','update','destroy']);
+
+Route::ApiResource('notas', 'API\NotaController')->except(['store','update','destroy']);
