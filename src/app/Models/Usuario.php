@@ -22,7 +22,7 @@ class Usuario extends Model
         'updated_at',
     ];
 
-    public function nota()
+    public function notas()
     {
         return $this->hasMany('App\Models\Nota');
     }

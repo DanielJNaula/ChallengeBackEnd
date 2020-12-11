@@ -19,6 +19,7 @@ class UsuarioCollection extends JsonResource
             'nombre' => $this->nombre,
             'direccion' => $this->direccion,
             'descripcion' => $this->descripcion,
+            'notas'     =>$this->notas,
             'created_at' => (string) $this->created_at,
             'updated_at' => (string) $this->updated_at,
         ];
